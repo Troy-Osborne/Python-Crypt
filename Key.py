@@ -52,13 +52,3 @@ def RecursiveHashtoFile(startVal,salt,filename="test.key",length=4096,distributi
         fileout.flush()
         n+=32
     return distributioninst
-
-
-"""
-for i in [("KeyName",b"Seed goes here",b"My Salt"),
-("Key2",b"Another Starting Seed/Password",b"My Salt")]:
-    start=time()
-    outdist=RecursiveHashtoFile(i[1],i[2],length=32*1024**2,filename="%s.key"%i[0])
-    end=time()
-    print("Done: %s seconds"%(end-start))
-"""
