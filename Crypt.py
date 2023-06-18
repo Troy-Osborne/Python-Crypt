@@ -2,9 +2,9 @@ from Key import RecursiveHashtoFile
 from XOR import XOR_Crypt
 from variablesizeheader import *
 import os
-salt="Personal Salt Miguel".encode('UTF-8')  #use this salt for anything personal
+#salt="Personal Salt Here".encode('UTF-8')  #use this salt for anything personal
 ##If you change the salt your version will be incompatible with any other that doesn't use the same salt
-#salt="Special Salt".encode('UTF-8')      #####use this salt for anything public
+salt="Special Salt".encode('UTF-8')      #####use this salt for anything public
 def make_not_exist(directory):
     if not os.path.exists(directory):
         os.mkdir(directory)
@@ -107,10 +107,6 @@ def UI(Caption,options):
         while not inp in options:
             inp=input()
         return inp
-
-
-
-
 
 ###If file is run directly open REPL
 if __name__=='__main__':
